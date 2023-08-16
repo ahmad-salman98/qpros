@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.customizedInput {
+  @apply p-2 px-3 border-2 rounded-lg outline-none text-black;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* date border  */
+.MuiOutlinedInput-notchedOutline {
+  border: 2px #e5e7eb solid;
+  border-radius: 8px;
+}
+
+/* date input  */
+.MuiInputBase-input {
+  padding: 10px 0;
+}
+
+/* date label  */
+.MuiInputLabel-root {
+  margin-top: -5px;
+  font-family: inherit;
+  color: rgb(147, 147, 147);
 }
