@@ -81,16 +81,16 @@ export default function AssignTo() {
 
   return (
     <div
-      className={`customizedInput col-span-12 relative cursor-pointer `}
+      className={`customizedInput col-span-12 relative cursor-pointer h-[auto!important] outline-none`}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <p
-        className={`text-[rgb(147,147,147)] cursor-pointer ${
+      <div
+        className={`text-[rgb(147,147,147)] cursor-pointer text-[14px] ${
           isOpen ? "border-b pb-2" : ""
         } `}
       >
-        Assigned To
-      </p>
+        {<p className="text-black">{formData.user.name}</p> || "Assigned To"}
+      </div>
       <div className="absolute inset-0 flex justify-end p-2  ">
         <DownArrow
           className={`${isOpen ? "-rotate-90" : "rotate-90"} duration-200`}

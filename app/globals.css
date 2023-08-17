@@ -10,7 +10,7 @@
 }
 
 .customizedInput {
-  @apply p-2 px-3 border-2 rounded-lg outline-none text-black;
+  @apply p-2 px-3 border-2 rounded-lg  text-black hover:outline outline-2 h-[41px] -mt-[1px];
 }
 
 /* date border  */
@@ -21,7 +21,8 @@
 
 /* date input  */
 .MuiInputBase-input {
-  padding: 10px 0;
+  padding: 10px 15px;
+  font-size: 14px;
 }
 
 /* date label  */
@@ -33,4 +34,9 @@
 
 .MuiStack-root {
   overflow: visible;
+}
+
+/* time picker  */
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  font-family: inherit;
 }

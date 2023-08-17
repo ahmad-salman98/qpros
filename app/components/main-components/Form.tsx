@@ -4,6 +4,10 @@ import React from "react";
 import BasicDatePicker from "../form-components/DatePicker";
 import { DatePicker } from "@mui/x-date-pickers";
 import AssignTo from "../form-components/AssignTo";
+import Duration from "../form-components/Duration";
+import TaskTime from "../form-components/TaskTime";
+import Description from "../form-components/Description";
+import Title from "../form-components/Title";
 
 export default function Form() {
   const { pageNumber, setPageNumber } = useMyContext();
@@ -16,21 +20,14 @@ export default function Form() {
       </h2>
 
       <form className="mt-5 grid grid-cols-12 gap-5 ">
-        <input
-          type="text"
-          className="customizedInput col-span-12 lg:col-span-6"
-          placeholder="Title"
-        />
+        <Title />
         <input
           type="text"
           className="customizedInput col-span-12 lg:col-span-6"
           placeholder="Subtitle"
         />
-        <textarea
-          className="customizedInput col-span-12 "
-          placeholder="Description"
-          rows={5}
-        />
+
+        <Description />
 
         <h2 className="text-[20px] lg:text-[24px] mt-8 font-[500] col-span-12 ">
           Please fill with the request
@@ -43,17 +40,8 @@ export default function Form() {
           <BasicDatePicker label="Due Date" />
         </div>
 
-        <input
-          type="text"
-          className="customizedInput col-span-12 mds:col-span-6 mt-1"
-          placeholder="Task Time"
-        />
-        <input
-          type="text"
-          className="customizedInput col-span-12 mds:col-span-6 mt-1"
-          placeholder="Duaration/h"
-        />
-
+        <TaskTime />
+        <Duration />
         <AssignTo />
       </form>
     </div>
