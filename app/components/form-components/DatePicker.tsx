@@ -7,7 +7,7 @@ import { useMyContext } from "@/app/Context/context";
 import dayjs from "dayjs";
 
 export default function BasicDatePicker({ label }: { label: string }) {
-  const { formData, setFormData } = useMyContext();
+  const { formData, setFormData, formErrors, setFormErrors } = useMyContext();
   const { startDate, dueDate } = formData;
 
   const handleDisable = (date) => {
@@ -22,20 +22,11 @@ export default function BasicDatePicker({ label }: { label: string }) {
       );
     }
 
-    if (label === "Start Date" && !!dueDate) {
-      const daysFromDue = dayjs(date).diff(dueDate, "day");
-
-      // Disable dates before startDate, after dueDate, and before today's date
-      return (
-        daysFromDue <= -6 || daysFromDue > 0 || date.isBefore(today, "day")
-      );
-    }
-
     // Disable dates before today's date
     return date.isBefore(today, "day");
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     if (label === "Due Date") {
       setFormData({ ...formData, dueDate: e });
     }
@@ -45,9 +36,20 @@ export default function BasicDatePicker({ label }: { label: string }) {
     }
   };
 
+  useEffect(() => {
+    const diff = dayjs(dueDate).diff(startDate, "day");
+    if (!isNaN(diff)) {
+      setFormErrors({
+        ...formErrors,
+        dueDate:
+          diff > 5 ? ` Due date can be 5 days after start date at most ` : "",
+      });
+    }
+  }, [startDate, dueDate]);
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={["DatePicker"]} sx={{}}>
+      <DemoContainer components={["DatePicker"]}>
         <DatePicker
           shouldDisableDate={handleDisable}
           label={label}

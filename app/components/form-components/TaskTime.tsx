@@ -13,7 +13,6 @@ export default function TaskTime() {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <MobileTimePicker
           format="h:mm a"
-          defaultValue={dayjs("2022-04-17T15:30")}
           sx={{ width: "100%", height: "100%" }}
           onChange={(e) =>
             setFormData({ ...formData, taskTime: e?.format("h:mm A") })
