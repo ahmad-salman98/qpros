@@ -2,8 +2,7 @@ import { useMyContext } from "@/app/Context/context";
 import React, { useEffect, useState } from "react";
 
 export default function Description() {
-  const [value, setValue] = useState<string>("");
-  const { formErrors, setFormErrors } = useMyContext();
+  const { formErrors, setFormErrors, formData, setFormData } = useMyContext();
   const handleChange = (e: object) => {
     if (e.target.value.length >= 3) {
       setFormErrors({
@@ -27,9 +26,9 @@ export default function Description() {
         type="text"
         className="customizedInput w-full "
         placeholder="Title"
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
         onBlur={handleChange}
-        value={value}
+        value={formData.title}
       />
 
       {formErrors.title && (

@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import { MyProvider } from "./Context/context";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Source = Source_Sans_3({
   subsets: ["latin"],
@@ -21,7 +23,11 @@ export default function RootLayout({
   return (
     <MyProvider>
       <html lang="en">
-        <body className={Source.className}>{children}</body>
+        <body className={Source.className}>
+          <ToastContainer />
+
+          {children}
+        </body>
       </html>
     </MyProvider>
   );

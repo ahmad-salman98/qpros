@@ -8,9 +8,12 @@ import Duration from "../form-components/Duration";
 import TaskTime from "../form-components/TaskTime";
 import Description from "../form-components/Description";
 import Title from "../form-components/Title";
+import SubTitle from "../form-components/SubTitle";
+import SubmitForm from "../form-components/SubmitForm";
 
 export default function Form() {
-  const { pageNumber, setPageNumber } = useMyContext();
+  const { pageNumber, formData, setFormData } = useMyContext();
+
   return (
     <div className="p-[5%] col-span-12 lg:col-span-7 h-full">
       <p className="text-gray-400 ">{pageNumber} / 2</p>
@@ -21,12 +24,7 @@ export default function Form() {
 
       <form className="mt-5 grid grid-cols-12 gap-5 ">
         <Title />
-        <input
-          type="text"
-          className="customizedInput col-span-12 lg:col-span-6"
-          placeholder="Subtitle"
-        />
-
+        <SubTitle />
         <Description />
 
         <h2 className="text-[20px] lg:text-[24px] mt-8 font-[500] col-span-12 ">
@@ -43,6 +41,7 @@ export default function Form() {
         <TaskTime />
         <Duration />
         <AssignTo />
+        <SubmitForm />
       </form>
     </div>
   );

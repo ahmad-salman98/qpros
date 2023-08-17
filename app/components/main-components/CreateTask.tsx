@@ -8,12 +8,14 @@ export default function CreateTask() {
       </h1>
 
       <p className="text-white text-center">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-        perspiciatis excepturi dignissimos corporis. Dicta cupiditate explicabo
-        sapiente veritatis maiores. Nobis, praesentium. Explicabo doloremque
-        magnam error voluptates sequi et fugiat, quam aspernatur officia dolorum
-        exercitationem laudantium cumque excepturi non optio tenetur illum
-        facilis voluptas quo assumenda sunt architecto soluta vitae sapiente!
+        Welcome to the task creation page. Here, you can create a new task and
+        manage its details. Please provide the necessary information to get
+        started. Make sure to fill in all the required fields and provide a
+        clear description of the task's objectives. Once you're satisfied with
+        the information provided, click the "Submit" button to add it to your
+        task list. Thank you for using our task management system. We're here to
+        help you stay productive and on top of your responsibilities. Happy
+        tasking!
       </p>
     </div>
   );
