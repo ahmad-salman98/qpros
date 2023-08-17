@@ -3,6 +3,7 @@ import { useMyContext } from "@/app/Context/context";
 import React from "react";
 import BasicDatePicker from "../form-components/DatePicker";
 import { DatePicker } from "@mui/x-date-pickers";
+import AssignTo from "../form-components/AssignTo";
 
 export default function Form() {
   const { pageNumber, setPageNumber } = useMyContext();
@@ -52,6 +53,8 @@ export default function Form() {
           className="customizedInput col-span-12 mds:col-span-6 mt-1"
           placeholder="Duaration/h"
         />
+
+        <AssignTo />
       </form>
     </div>
   );
