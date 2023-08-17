@@ -3,13 +3,15 @@ import { useMyContext } from "@/app/Context/context";
 import React, { ReactNode } from "react";
 
 export default function Summary() {
-  const { formData } = useMyContext();
+  const { formData, pageNumber } = useMyContext();
   return (
-    <div className="p-[5%] col-span-12 lg:col-span-7 h-fit w-full lg:m-auto">
+    <div className="p-[5%] col-span-12 lg:col-span-7 h-screen ">
+      <p className="text-gray-400 mb-2">{pageNumber} / 2</p>
+
       <h2 className="text-[20px] lg:text-[24px]   font-[500] ">Task Summary</h2>
       <hr className="mt-2 mb-4" />
 
-      <div className="grid grid-cols-12 gap-5   ">
+      <div className="grid grid-cols-12 gap-5 h-fit w-full lg:m-auto  ">
         <div className="col-span-12 sm:col-span-6 ">
           <strong>Title :</strong> {formData.title}
         </div>
