@@ -53,6 +53,8 @@ The following validation checks are implemented:
 - **Submit Button**: Clicking the "Submit" button validates the input data. If successful, the input form is hidden, and the task summary is displayed.
 - **Summary Display**: The summary section includes all entered task details: start date, due date, duration, time spent, title, subtitle, description, and assigned to.
 
+## Online Demo
+check the hosted version of the website from here: https://qpros-ogz4-1mojzlrmm-ahmad-salman98.vercel.app/
 ## Getting Started
 
 To run the application locally, follow these steps:
