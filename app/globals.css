@@ -15,28 +15,28 @@
 
 /* date border  */
 .MuiOutlinedInput-notchedOutline {
-  border: 2px #e5e7eb solid;
-  border-radius: 8px;
+  border: 2px #e5e7eb solid !important;
+  border-radius: 8px !important;
 }
 
 /* date input  */
 .MuiInputBase-input {
-  padding: 10px 15px;
-  font-size: 14px;
+  padding: 10px 15px !important;
+  font-size: 14px !important;
 }
 
 /* date label  */
 .MuiInputLabel-root {
-  margin-top: -5px;
-  font-family: inherit;
-  color: rgb(147, 147, 147);
+  margin-top: -5px !important;
+  font-family: inherit !important;
+  color: rgb(147, 147, 147) !important;
 }
 
 .MuiStack-root {
-  overflow: visible;
+  overflow: visible !important;
 }
 
 /* time picker  */
 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-  font-family: inherit;
+  font-family: inherit !important;
 }
