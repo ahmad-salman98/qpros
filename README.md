@@ -54,7 +54,7 @@ The following validation checks are implemented:
 - **Summary Display**: The summary section includes all entered task details: start date, due date, duration, time spent, title, subtitle, description, and assigned to.
 
 ## Online Demo
-check the hosted version of the website from here: https://qpros-ogz4-1mojzlrmm-ahmad-salman98.vercel.app/
+check the hosted version of the website from here: https://qpros-ogz4.vercel.app/
 ## Getting Started
 
 To run the application locally, follow these steps:
