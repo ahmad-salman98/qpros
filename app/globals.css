@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.customizedInput {
+  @apply p-2 px-3 border-2 rounded-lg  text-black hover:outline outline-2 h-[41px] -mt-[1px];
+}
+
+/* date border  */
+.MuiOutlinedInput-notchedOutline {
+  border: 2px #e5e7eb solid;
+  border-radius: 8px;
+}
+
+/* date input  */
+.MuiInputBase-input {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+/* date label  */
+.MuiInputLabel-root {
+  margin-top: -5px;
+  font-family: inherit;
+  color: rgb(147, 147, 147);
+}
+
+.MuiStack-root {
+  overflow: visible;
+}
+
+/* time picker  */
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  font-family: inherit;
+}
