@@ -2,9 +2,10 @@ import { useMyContext } from "@/app/Context/context";
 import React, { useState } from "react";
 
 export default function Description() {
-  const { formErrors, setFormErrors, formData, setFormData } = useMyContext();
+  const { formErrors, setFormErrors, formData, setFormData } =
+    useMyContext() as any;
 
-  const handleChange = (e: object) => {
+  const handleChange = (e: any) => {
     if (e.target.value.length <= 150) {
       setFormData({ ...formData, description: e.target.value });
       setFormErrors({ ...formErrors, description: "" });

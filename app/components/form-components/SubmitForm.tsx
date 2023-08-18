@@ -4,8 +4,7 @@ import React from "react";
 import { toast } from "react-toastify";
 
 export default function SubmitForm() {
-  const { formErrors, formData, setPageNumber } = useMyContext();
-
+  const { formErrors, formData, setPageNumber } = useMyContext() as any;
   const handleSubmit = () => {
     let shouldSubmit = true;
     for (const key in formData) {

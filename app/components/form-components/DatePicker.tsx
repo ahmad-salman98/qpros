@@ -8,9 +8,9 @@ import dayjs from "dayjs";
 
 export default function BasicDatePicker({ label }: { label: string }) {
   const { formData, setFormData, formErrors, setFormErrors } = useMyContext();
-  const { startDate, dueDate } = formData;
+  const { startDate, dueDate } = formData as any;
 
-  const handleDisable = (date) => {
+  const handleDisable = (date: any) => {
     const today = dayjs(); // Get today's date
 
     if (label === "Due Date" && !!startDate) {

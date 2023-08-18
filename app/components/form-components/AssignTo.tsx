@@ -37,7 +37,7 @@ export default function AssignTo() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   //   -------------------- Variables --------------------
-  const { formData, setFormData } = useMyContext();
+  const { formData, setFormData } = useMyContext() as any;
 
   //   -------------------- Functions --------------------
   const getUsers = async (): Promise<FetchedUserData> => {
@@ -89,7 +89,8 @@ export default function AssignTo() {
           isOpen ? "border-b pb-2" : ""
         } `}
       >
-        {<p className="text-black">{formData.user.name}</p> || "Assigned To"}
+        {<p className="text-black">Assigned To: {formData.user.name}</p> ||
+          "Assigned To"}
       </div>
       <div className="absolute inset-0 flex justify-end p-2  ">
         <DownArrow

@@ -2,8 +2,9 @@ import { useMyContext } from "@/app/Context/context";
 import React, { useEffect, useState } from "react";
 
 export default function Description() {
-  const { formErrors, setFormErrors, formData, setFormData } = useMyContext();
-  const handleChange = (e: object) => {
+  const { formErrors, setFormErrors, formData, setFormData } =
+    useMyContext() as any;
+  const handleChange = (e: any) => {
     if (e.target.value.length >= 3) {
       setFormErrors({
         ...formErrors,

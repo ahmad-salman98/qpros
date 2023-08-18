@@ -14,7 +14,7 @@ export default function TaskTime() {
         <MobileTimePicker
           format="h:mm a"
           sx={{ width: "100%", height: "100%" }}
-          onChange={(e) =>
+          onChange={(e: any) =>
             setFormData({ ...formData, taskTime: e?.format("h:mm A") })
           }
         />

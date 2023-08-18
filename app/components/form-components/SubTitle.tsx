@@ -2,7 +2,7 @@ import { useMyContext } from "@/app/Context/context";
 import React, { useEffect, useState } from "react";
 
 export default function Description() {
-  const { formData, setFormData } = useMyContext();
+  const { formData, setFormData } = useMyContext() as any;
 
   return (
     <div className="col-span-12 relative  lg:col-span-6 ">
@@ -13,8 +13,6 @@ export default function Description() {
         onChange={(e) => setFormData({ ...formData, subTitle: e.target.value })}
         value={formData.subTitle}
       />
-
-      
     </div>
   );
 }

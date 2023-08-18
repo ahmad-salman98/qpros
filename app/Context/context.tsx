@@ -60,8 +60,8 @@ export function MyProvider({ children }: Props) {
     description: "",
     startDate: "",
     dueDate: "",
-    taskTime: 0,
-    duration: 0,
+    taskTime: null,
+    duration: null,
     user: object,
   });
 

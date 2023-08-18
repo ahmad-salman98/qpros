@@ -3,7 +3,7 @@ import { useMyContext } from "@/app/Context/context";
 import React, { ReactNode } from "react";
 
 export default function Summary() {
-  const { formData, pageNumber } = useMyContext();
+  const { formData, pageNumber } = useMyContext() as any;
   return (
     <div className="p-[5%] col-span-12 lg:col-span-7 h-screen ">
       <p className="text-gray-400 mb-2">{pageNumber} / 2</p>

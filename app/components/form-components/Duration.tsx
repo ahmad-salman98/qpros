@@ -2,7 +2,8 @@ import { useMyContext } from "@/app/Context/context";
 import React, { use, useState } from "react";
 
 export default function Duration() {
-  const { formData, setFormData, formErrors, setFormErrors } = useMyContext();
+  const { formData, setFormData, formErrors, setFormErrors } =
+    useMyContext() as any;
 
   const handleChange = (value: string): void => {
     const regex = /^[0-9]*$/;
